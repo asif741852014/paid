@@ -1,21 +1,13 @@
-name: Check Run Listener
+name: Example Workflow
 
 on:
-  check_run
-
+  push:
+    branches:
+      - main
 
 jobs:
-  capture_check_run:
+  example_job:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-
-      - name: Display Check Run Information
-        run: |
-          echo "Check Run Name: ${{ github.event.check_run.name }}"
-          echo "Check Run Status: ${{ github.event.check_run.status }}"
-          echo "Check Run Conclusion: ${{ github.event.check_run.conclusion }}"
-          echo "Check Run Started At: ${{ github.event.check_run.started_at }}"
-          echo "Check Run Completed At: ${{ github.event.check_run.completed_at }}"
+      - name: Print Hello World
+        run: echo "Hello, world!"
