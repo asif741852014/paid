@@ -2,8 +2,8 @@ name: Check Run Listener
 
 on:
   check_run:
-    types: 
-      - completed
+    types: [created, rerequested, completed]
+
 
 jobs:
   capture_check_run:
