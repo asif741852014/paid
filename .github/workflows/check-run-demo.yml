@@ -14,4 +14,5 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Display Check Run Details
-        run: echo "Check Run event was triggered by: ${{ github.event.check_run.name }}"
+        run: echo 'Check Run event was triggered by: ${{ github.event.check_run.name }}'
+
