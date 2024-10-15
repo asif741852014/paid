@@ -1,10 +1,9 @@
 name: Trigger on Workflow Run Completed
 
 on:
-  workflow_run:
-    workflows: ["Example Workflow"]
+  workflow_job:
     types:
-      - requested
+      - queued
 
 jobs:
   run_after_workflow:
