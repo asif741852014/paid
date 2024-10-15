@@ -14,4 +14,4 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Display Event Details
-        run: echo "Push event was triggered on branch: ${{ github.ref }}"
+        run: echo "Push event was triggered on branch:"
