@@ -4,7 +4,7 @@ on:
   workflow_run:
     workflows: ["Example Workflow"]
     types:
-      - completed
+      - requested
 
 jobs:
   run_after_workflow:
