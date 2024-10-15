@@ -3,7 +3,7 @@ name: Check Run Listener
 on:
   check_run:
     types: 
-      - completed  # This will trigger when the linter completes
+      - completed
 
 jobs:
   capture_check_run:
