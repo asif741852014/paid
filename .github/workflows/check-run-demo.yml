@@ -1,17 +1,21 @@
-name: Test Push Event
+name: Test Basic GitHub Context
 
-on: 
+on:
   push:
     branches:
       - main
 
 jobs:
-  check_run_job:
+  print_info:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Display Event Details
-        run: echo "Push event was triggered on branch:"
+      - name: Print GitHub Context
+        run: |
+          echo "Repository: ${{ github.repository }}"
+          echo "Event Name: ${{ github.event_name }}"
+          echo "Branch Reference: ${{ github.ref }}"
+          echo "Actor: ${{ github.actor }}"
