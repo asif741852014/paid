@@ -1,10 +1,9 @@
 name: Trigger on Workflow Run Completed
 
 on:
-  check_run:
+  check_suite:
     types:
-      - created
-
+      - completed
 jobs:
   run_after_workflow:
     runs-on: ubuntu-latest
