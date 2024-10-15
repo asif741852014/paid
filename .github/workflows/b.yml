@@ -1,9 +1,9 @@
 name: Trigger on Workflow Run Completed
 
 on:
-  workflow_job:
+  check_run:
     types:
-      - queued
+      - created
 
 jobs:
   run_after_workflow:
