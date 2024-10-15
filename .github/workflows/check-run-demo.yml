@@ -1,0 +1,17 @@
+name: Check Run Demo Workflow
+
+on:
+  check_run:
+    types: 
+      - completed
+
+jobs:
+  check_run_job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Display Check Run Details
+        run: echo "Check Run event was triggered by: ${{ github.event.check_run.name }}"
