@@ -1,9 +1,9 @@
-name: Check Run Demo Workflow
+name: Test Push Event
 
-on:
-  check_run:
-    types: 
-      - completed
+on: 
+  push:
+    branches:
+      - main
 
 jobs:
   check_run_job:
@@ -13,6 +13,5 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Display Check Run Details
-        run: echo 'Check Run event was triggered by: ${{ github.event.check_run.name }}'
-
+      - name: Display Event Details
+        run: echo 'Push event was triggered on branch: ${{ github.ref }}'
