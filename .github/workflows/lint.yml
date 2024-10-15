@@ -19,6 +19,7 @@ jobs:
         env:
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          VALIDATE_PYTHON: true  # Enable Python validation
-          VALIDATE_JS: false     # Disable JavaScript validation
-          VALIDATE_HTML: false   # Disable HTML validation
+          VALIDATE_PYTHON: true     # Enable Python validation
+          VALIDATE_JS: false        # Disable JavaScript validation
+          VALIDATE_HTML: false      # Disable HTML validation
+          VALIDATE_YAML: false      # Disable YAML validation
