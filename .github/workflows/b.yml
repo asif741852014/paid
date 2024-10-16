@@ -1,7 +1,7 @@
 name: Trigger on Workflow Run Completed
 
 on:
-  check_suite:
+  check_run:
     types:
       - "completed"
 jobs:
